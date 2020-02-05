@@ -1,0 +1,15 @@
+version: '3.5'
+services:
+  openvino-cent:
+    build: .
+    image: openvino-cent:latest
+    environment:
+      DISPLAY: $DISPLAY
+    volumes:
+      - "/dev:/dev"
+      - "$HOME/.Xauthority:/root/.Xauthority:rw"
+      - "$HOME/hostdir:/root/hostdir:rw"
+    hostname: openvino-cent
+    network_mode: "host"
+    tty: true
+    stdin_open: true
