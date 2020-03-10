@@ -10,6 +10,6 @@ services:
       - "$HOME/.Xauthority:/root/.Xauthority:rw"
       - "$HOME/hostdir:/root/hostdir:rw"
     hostname: openvino-cent
+    privileged: true
     network_mode: "host"
     tty: true
-    stdin_open: true
