@@ -13,13 +13,13 @@ docker-compose build
 sudo ./install_packages.sh
 ```
 
-1. Provide X access controll on your computer from remote. but this command is so dangruous. You have disabled access control to X on your computer. If you provide X access controll on your computer from remote, You must access controll is limited and disable the always permissions Once that is done.
+2. Provide X access controll on your computer from remote. but this command is so dangruous. You have disabled access control to X on your computer. If you provide X access controll on your computer from remote, You must access controll is limited and disable the always permissions Once that is done.
 
 ``` bash
 xhost +[remote machine's IP]
 ```
 
-1. Run OpenVINO on docker container and attach the container.
+3. Run OpenVINO on docker container and attach the container.
 
 ``` bash
 docker-compose run openvino-cent bash
@@ -27,7 +27,7 @@ docker-compose run openvino-cent bash
 
 There is a case where X fording from a remote computer does not work. Start the container in this command that case.
 ``` bash
-docker run -it --privileged --net=host -v /dev:/dev -e DISPLAY=$DISPLAY -v $HOME/.Xauthority:/root/.Xauthority:rw -v /host:/host openvino-centos bash
+docker run -it --privileged --net=host -v /dev:/dev -e DISPLAY=$DISPLAY -v $HOME/.Xauthority:/root/.Xauthority:rw -v /host:/host openvino-cent bash
 ```
 
 ## running demo
