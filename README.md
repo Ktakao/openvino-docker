@@ -6,7 +6,7 @@ Create a CentOS based openvino environment on a docker
 ``` bash
 docker-compose build
 ```
-# Using the image
+## Using the image
 1. If you want to display the calculation result in the GUI, Run the script "install_packages.sh".
 
 ``` bash
